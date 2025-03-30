@@ -6,10 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://TusharPDev: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@github.com/TusharPDev/qp-assessment.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
