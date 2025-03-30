@@ -8,6 +8,7 @@ const PORT = 5050;
 //routes
 app.get("/test", (req,res) =>{
     res.status(200).send("<h1>Grocery App</h1>");
+    
 });
 
 //listen
