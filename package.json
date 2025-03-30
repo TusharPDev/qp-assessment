@@ -1,0 +1,23 @@
+{
+  "name": "qpassesment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://TusharPDev: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@github.com/TusharPDev/qp-assessment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TusharPDev/qp-assessment/issues"
+  },
+  "homepage": "https://github.com/TusharPDev/qp-assessment#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
