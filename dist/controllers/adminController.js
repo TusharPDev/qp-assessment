@@ -17,9 +17,15 @@ const db_1 = __importDefault(require("../config/db"));
 // Function to add an item
 const addGrocery = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
+        console.log("Body:", req.body);
         const { name, price, quantity, createdBy } = req.body;
         const [result] = yield db_1.default.query("INSERT INTO groceries (name, price, quantity,created_by) VALUES (?, ?, ?,?)", [name, price, quantity, createdBy]);
-        res.status(201).json({ message: "Grocery added successfully", groceryId: result.insertId });
+        res
+            .status(201)
+            .json({
+            message: "Grocery added successfully",
+            groceryId: result.insertId,
+        });
     }
     catch (error) {
         res.status(500).json({ message: "Error adding grocery", error });
@@ -30,6 +36,7 @@ exports.addGrocery = addGrocery;
 const getGroceries = (_req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const [rows] = yield db_1.default.query("SELECT * FROM groceries");
+        console.log("Body:");
         res.json(rows);
     }
     catch (error) {

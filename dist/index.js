@@ -16,12 +16,13 @@ const express_1 = __importDefault(require("express"));
 const db_1 = __importDefault(require("./config/db"));
 const app = (0, express_1.default)();
 const dotenv_1 = __importDefault(require("dotenv"));
+const adminRoutes_1 = __importDefault(require("./routes/adminRoutes"));
+const userRoutes_1 = __importDefault(require("./routes/userRoutes"));
 dotenv_1.default.config();
-const PORT = process.env.PORT || 3000;
-// //routes
-app.get("/test", (req, res) => {
-    res.status(200).send("<h1>Grocery App</h1>");
-});
+app.use(express_1.default.json());
+const PORT = process.env.PORT || 5050;
+app.use("/api/admin", adminRoutes_1.default);
+app.use("/api/user", userRoutes_1.default);
 //test db 
 app.get("/test-db", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {

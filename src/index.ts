@@ -4,14 +4,15 @@ import { Request, Response } from 'express';
 const app = express();
 import dotenv from 'dotenv';
 import adminRoutes from "./routes/adminRoutes";
+import userRoutes from './routes/userRoutes'
 
 dotenv.config();
 
-
-const PORT = process.env.PORT || 3000;
+app.use(express.json()); 
+const PORT = process.env.PORT || 5050;
 
 app.use("/api/admin", adminRoutes);
-
+app.use("/api/user", userRoutes)
 
 //test db 
 app.get("/test-db", async (req: Request, res: Response) => {

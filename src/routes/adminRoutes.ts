@@ -3,9 +3,9 @@ import { addGrocery, getGroceries, updateGrocery, deleteGrocery } from "../contr
 
 const router = express.Router();
 
-router.post("/groceries", addGrocery);
-router.get("/groceries", getGroceries);
-router.put("/groceries/:id", updateGrocery);
-router.delete("/groceries/:id", deleteGrocery);
+router.post("/addGroceries", addGrocery);
+router.get("/getGroceries", getGroceries);
+router.put("/updateGroceries/:id", updateGrocery);
+router.delete("/deleteGroceries/:id", deleteGrocery);
 
 export default router;
